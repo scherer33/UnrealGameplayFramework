@@ -1,0 +1,44 @@
+# Unreal Engine — generated / build artifacts
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.xcodeproj/
+*.xcworkspace/
+
+# Build output
+Build/Receipts/
+Build/Report/
+Build/Uploads/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Clang / MSVC object & debug files
+*.o
+*.obj
+*.pdb
+*.ipdb
+*.iobj
+*.ilk
+*.tlog
+*.log
+
+# Unreal generated code
+*.generated.h
+*.gen.cpp
+*.modules
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
