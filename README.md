@@ -1,10 +1,11 @@
 # Unreal Gameplay Framework
 
-Design-first gameplay framework for **Unreal Engine 5** — a collection of modular,
-multiplayer-ready systems specified before a single line of gameplay code is written.
+Design-first gameplay framework for **Unreal Engine 5** — modular, multiplayer-ready
+systems, specified first and then implemented as a drop-in plugin.
 
-> **Status:** design phase. This repository currently contains the architecture specs.
-> The C++ implementation lands incrementally according to the [roadmap](docs/ROADMAP.md).
+> **Status:** phase 1. Written specs are complete for every module; the phase 1
+> C++ plugin (`GameplayFramework/`, UE 5.5) ships the `UHealthComponent` and the
+> `IInteractable` interface. The remaining modules land per the [roadmap](docs/ROADMAP.md).
 
 ---
 
@@ -52,7 +53,7 @@ extend without coordination overhead.
 | Phase | Scope |
 | --- | --- |
 | 0 | Written specs for every module (this repo today) |
-| 1 | C++ core: Health, Interaction components |
+| 1 | C++ core: Health component + Interactable interface (shipped in `GameplayFramework/`) |
 | 2 | Inventory & Weapon framework on top of the core |
 | 3 | Enhanced Input integration, UI hooks, save system |
 | 4 | Gameplay Ability System (GAS) integration |
@@ -66,6 +67,22 @@ Full detail in [docs/ROADMAP.md](docs/ROADMAP.md).
 ## Repository structure
 
 ```text
+GameplayFramework/            # UE 5.5 plugin (drop into YourProject/Plugins/)
+├── GameplayFramework.uplugin
+├── README.md                 # install, usage, network model
+├── Source/GameplayFramework/
+│   ├── GameplayFramework.Build.cs
+│   ├── Public/
+│   │   ├── GameplayFramework.h
+│   │   ├── HealthComponent.h   # UHealthComponent (phase 1)
+│   │   └── Interactable.h      # IInteractable   (phase 1)
+│   └── Private/
+│       ├── GameplayFramework.cpp
+│       ├── HealthComponent.cpp
+│       └── Interactable.cpp
+└── Tests/
+    └── HealthComponentTests.cpp  # Automation tests (copy into a project)
+
 docs/
 ├── ROADMAP.md              # planned work, phase by phase
 ├── architecture/

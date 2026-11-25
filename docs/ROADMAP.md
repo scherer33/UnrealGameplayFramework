@@ -24,15 +24,18 @@ Written specs for every module. This repository, today.
 
 First playable foundation. Small, reusable components with no cross-dependencies.
 
-- [ ] `UHealthComponent` — damage, healing, death, replication
-- [ ] `IInteractable` interface + player interaction trace
-- [ ] Project plugin structure (`Plugins/GameplayFramework`)
-- [ ] Automated tests for the components above
+- [x] Plugin structure (`GameplayFramework/`, UE 5.5) — copied to `Plugins/` in a project
+- [x] `UHealthComponent` — damage, healing, death, replication
+- [x] `IInteractable` interface
+- [ ] Player interaction trace (`UInteractionComponent`) — pushed to Phase 2
+- [ ] Compile the plugin against a real UE 5.5 project
+- [ ] Automated tests for the components above (run in a project)
 
 ---
 
 # Phase 2 — Items & Weapons
 
+- [ ] `UInteractionComponent` — player-side trace, `CanInteract` + `Interact` on the authority
 - [ ] Data-Asset-driven item definitions
 - [ ] `UInventoryComponent` — add, remove, stack, equip
 - [ ] Weapon base class + first weapon types (rifle, pistol)
