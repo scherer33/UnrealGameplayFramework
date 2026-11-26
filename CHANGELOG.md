@@ -11,3 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Multiplayer architecture spec (server authority, replication, RPC policy).
 - Coding standards and optimization guide.
 - Phased roadmap from specs to C++ implementation, GAS and dedicated servers.
+
+## [Unreleased]
+
+### Added
+
+- `GameplayFramework/` UE 5.5 plugin: `UHealthComponent` (replicated, server-authoritative)
+  and the `IInteractable` Blueprint-native interface.
+- Unreal Automation tests for the health component (`Tests/HealthComponentTests.cpp`).

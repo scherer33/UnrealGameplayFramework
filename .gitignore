@@ -38,6 +38,9 @@ Plugins/*/Intermediate/
 *.gen.cpp
 *.modules
 
+# Plugin build output (RunUAT BuildPlugin)
+Packaged/
+
 # OS files
 .DS_Store
 Thumbs.db
